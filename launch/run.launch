@@ -1,0 +1,9 @@
+<launch>
+
+    <param name="kitti_sequence" type="string" value="00" />
+
+    <node pkg="kitti_ros" type="kitti_ros_main" name="kitti_ros_main" output="screen" respawn="true" />
+
+    <node pkg="rviz" type="rviz" name="kitti_ros_rviz" args="-d $(find kitti_ros)/launch/rviz.rviz" />
+
+</launch>
